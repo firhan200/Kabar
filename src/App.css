@@ -1,0 +1,123 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@-webkit-keyframes logoAnimation {
+  0%   { transform: rotate(360deg); }
+  100% { transform: rotate(0deg); }
+}
+@-moz-keyframes logoAnimation {
+  0%   { transform: rotate(360deg); }
+  100% { transform: rotate(0deg); }
+}
+@-o-keyframes logoAnimation {
+  0%   { transform: rotate(360deg); }
+  100% { transform: rotate(0deg); }
+}
+@keyframes logoAnimation {
+  0%   { transform: rotate(360deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.navbar-brand img{
+  width:50px;
+  -webkit-transition: 0.5s; /* Safari */
+  transition: 0.5s;
+  -webkit-animation: logoAnimation 2s linear 0s infinite reverse; /* Safari 4+ */
+  -moz-animation:    logoAnimation 2s linear 0s infinite reverse; /* Fx 5+ */
+  -o-animation:      logoAnimation 2s linear 0s infinite reverse; /* Opera 12+ */
+  animation:         logoAnimation 5s linear 0s infinite reverse; /* IE 10+, Fx 29+ */
+}
+
+.news-box{
+  margin-bottom:25px;
+}
+
+.news-img-frame{
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height:150px;
+}
+
+.news-img-frame img{
+    -webkit-transition: 0.5s; /* Safari */
+    transition: 0.5s;
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+.news-img-frame img:hover{
+  width: 150%;
+}
+
+.news-box .card-title{
+  font-size:12pt;
+  font-weight: bold;
+}
+
+.news-box .card-text{
+  font-size:10pt;
+  color: #767676;
+  margin-bottom: 5px !important;
+}
+
+.news-box .news-author{
+  font-style: italic;
+  font-size: 10pt;
+  margin-bottom: 5px !important;
+}
+
+.news-box .news-date{
+  position:absolute;
+  background-color:blue;
+  color:#fff !important;
+  padding: 5px;
+}
+
+.pad{
+  margin-top:50px;
+  margin-bottom:50px;
+}
+
+.news-side{
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.news-side .news-side-label{
+  position: absolute;
+  padding: 5px;
+  bottom: 0;
+  background-color: #fff;
+  opacity: 0.7;
+}
