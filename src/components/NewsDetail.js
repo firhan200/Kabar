@@ -24,7 +24,7 @@ class NewsDetail extends React.Component {
   		//set loading to false
       this.setState({'loadingDetail':true});
 
-		fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=f97fc0b0f6034f1a9efee4bd4c764910')
+		fetch('https://newsapi.org/v2/top-headlines?q=tech&apiKey=f97fc0b0f6034f1a9efee4bd4c764910')
     	.then(response => response.json())
       	.then((data) => {
       		if(this.state.loadArticles==true){
@@ -36,12 +36,17 @@ class NewsDetail extends React.Component {
       		}
       		
 
-      	  //get news by title
-	      for(var i = 0;i < data.articles.length;i++){
-	      	if(data.articles[i].title==title){      		
-	      		this.setState({ news: data.articles[i] });
-	      	}
-	      }
+			//get news by title
+			if(title=='first'){
+				this.setState({ news: data.articles[0] });
+			}else{
+				for(var i = 0;i < data.articles.length;i++){
+					if(data.articles[i].title==title){      		
+						this.setState({ news: data.articles[i] });
+					}
+				}
+			}
+	      
 
 	      //set loading to false
 	      this.setState({'loadingDetail':false});
